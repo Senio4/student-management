@@ -14,6 +14,20 @@
 
     <h2>Student List</h2>
 
+    <form action="/" method="GET">
+
+        <input
+            type="text"
+            name="search"
+            placeholder="Search student..."
+        >
+
+        <button type="submit">Search</button>
+
+    </form>
+
+    <br>
+
     <table border="1" cellpadding="10">
 
         <tr>
@@ -28,6 +42,7 @@
         <% students.forEach(student => { %>
 
         <tr>
+
             <td><%= student.id %></td>
 
             <td><%= student.student_id %></td>
@@ -42,6 +57,7 @@
             <td><%= student.year_level %></td>
 
             <td><%= student.email %></td>
+
         </tr>
 
         <% }); %>
