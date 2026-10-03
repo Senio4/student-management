@@ -1,13 +1,19 @@
 {
   "name": "student-management",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Student management system with MySQL and Express",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "node app.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "student",
+    "management",
+    "express",
+    "mysql"
+  ],
+  "author": "Senio4",
   "license": "ISC",
   "dependencies": {
     "ejs": "^6.0.1",
