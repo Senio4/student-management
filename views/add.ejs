@@ -1,39 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Student</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <div class="container form-container">
+        <header class="topbar compact">
+            <h1>Add Student</h1>
+            <nav>
+                <a href="/" class="nav-button">Back to List</a>
+            </nav>
+        </header>
 
-    <h1>Add Student</h1>
+        <main class="panel">
+            <form action="/students/add" method="POST" class="student-form">
+                <div class="form-grid">
+                    <label>
+                        <span>Student ID</span>
+                        <input type="text" name="student_id" required>
+                    </label>
 
-    <form action="/students/add" method="POST">
+                    <label>
+                        <span>First Name</span>
+                        <input type="text" name="first_name" required>
+                    </label>
 
-        <label>Student ID:</label><br>
-        <input type="text" name="student_id" required><br><br>
+                    <label>
+                        <span>Last Name</span>
+                        <input type="text" name="last_name" required>
+                    </label>
 
-        <label>First Name:</label><br>
-        <input type="text" name="first_name" required><br><br>
+                    <label>
+                        <span>Course</span>
+                        <input type="text" name="course" required>
+                    </label>
 
-        <label>Last Name:</label><br>
-        <input type="text" name="last_name" required><br><br>
+                    <label>
+                        <span>Year Level</span>
+                        <input type="number" name="year_level" min="1" max="5" required>
+                    </label>
 
-        <label>Course:</label><br>
-        <input type="text" name="course" required><br><br>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" required>
+                    </label>
+                </div>
 
-        <label>Year Level:</label><br>
-        <input type="number" name="year_level" min="1" max="5" required><br><br>
-
-        <label>Email:</label><br>
-        <input type="email" name="email" required><br><br>
-
-        <button type="submit">Save Student</button>
-
-    </form>
-
-    <br>
-
-    <a href="/">Back to Student List</a>
-
+                <div class="form-actions">
+                    <button type="submit" class="primary">Save Student</button>
+                </div>
+            </form>
+        </main>
+    </div>
 </body>
 </html>

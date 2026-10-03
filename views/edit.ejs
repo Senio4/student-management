@@ -1,39 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Student</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <div class="container form-container">
+        <header class="topbar compact">
+            <h1>Edit Student</h1>
+            <nav>
+                <a href="/" class="nav-button">Back to List</a>
+            </nav>
+        </header>
 
-    <h1>Edit Student</h1>
+        <main class="panel">
+            <form action="/students/update/<%= student.id %>" method="POST" class="student-form">
+                <div class="form-grid">
+                    <label>
+                        <span>Student ID</span>
+                        <input type="text" name="student_id" value="<%= student.student_id %>" required>
+                    </label>
 
-    <form action="/students/update/<%= student.id %>" method="POST">
+                    <label>
+                        <span>First Name</span>
+                        <input type="text" name="first_name" value="<%= student.first_name %>" required>
+                    </label>
 
-        <label>Student ID:</label><br>
-        <input type="text" name="student_id" value="<%= student.student_id %>" required><br><br>
+                    <label>
+                        <span>Last Name</span>
+                        <input type="text" name="last_name" value="<%= student.last_name %>" required>
+                    </label>
 
-        <label>First Name:</label><br>
-        <input type="text" name="first_name" value="<%= student.first_name %>" required><br><br>
+                    <label>
+                        <span>Course</span>
+                        <input type="text" name="course" value="<%= student.course %>" required>
+                    </label>
 
-        <label>Last Name:</label><br>
-        <input type="text" name="last_name" value="<%= student.last_name %>" required><br><br>
+                    <label>
+                        <span>Year Level</span>
+                        <input type="number" name="year_level" min="1" max="5" value="<%= student.year_level %>" required>
+                    </label>
 
-        <label>Course:</label><br>
-        <input type="text" name="course" value="<%= student.course %>" required><br><br>
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" value="<%= student.email %>" required>
+                    </label>
+                </div>
 
-        <label>Year Level:</label><br>
-        <input type="number" name="year_level" min="1" max="5" value="<%= student.year_level %>" required><br><br>
-
-        <label>Email:</label><br>
-        <input type="email" name="email" value="<%= student.email %>" required><br><br>
-
-        <button type="submit">Update Student</button>
-
-    </form>
-
-    <br>
-
-    <a href="/">Back to Student List</a>
-
+                <div class="form-actions">
+                    <button type="submit" class="primary">Update Student</button>
+                </div>
+            </form>
+        </main>
+    </div>
 </body>
 </html>
